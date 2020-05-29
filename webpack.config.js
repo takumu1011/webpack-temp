@@ -25,6 +25,18 @@ module.exports = {
             loader: 'sass-loader',
           }
         ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+              name: './assets/img/[name].[ext]',
+            }
+          }
+        ]
       }
     ]
   },
